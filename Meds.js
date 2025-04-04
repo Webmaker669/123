@@ -1,3 +1,5 @@
+// Made by [Your Name]
+
 elements.painkiller = {
     color: "#FFD700",
     behavior: behaviors.POWDER,
@@ -7,6 +9,7 @@ elements.painkiller = {
     reactions: {
         "water": { elem1: "dissolved_painkiller", elem2: "water" },
     },
+    desc: "A general pain-relieving medication.",
 };
 
 elements.dissolved_painkiller = {
@@ -15,6 +18,7 @@ elements.dissolved_painkiller = {
     category: "Medicine",
     state: "liquid",
     tempHigh: 100,
+    desc: "Painkiller dissolved in water.",
 };
 
 elements.antibiotic = {
@@ -26,6 +30,7 @@ elements.antibiotic = {
     reactions: {
         "bacteria": { elem1: null, elem2: "dead_bacteria" },
     },
+    desc: "Fights bacteria. Effective in medical situations.",
 };
 
 elements.experimental_drug = {
@@ -37,6 +42,7 @@ elements.experimental_drug = {
     reactions: {
         "human": { elem1: "mutant_human", elem2: null },
     },
+    desc: "Unstable drug. May cause mutations.",
 };
 
 elements.mutant_human = {
@@ -44,4 +50,10 @@ elements.mutant_human = {
     behavior: behaviors.LIQUID,
     category: "Life",
     state: "liquid",
+    desc: "The result of an experimental drug. Strange and unstable.",
 };
+
+// Custom category icon (optional)
+if (!settings.hiddenCategories.includes("Medicine")) {
+    settings.hiddenCategories.splice(settings.hiddenCategories.indexOf("Medicine"), 1);
+}
