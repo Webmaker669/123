@@ -1,4 +1,4 @@
-// Made by [Your Name]
+// Made by [Noob Man]
 
 elements.painkiller = {
     color: "#FFD700",
